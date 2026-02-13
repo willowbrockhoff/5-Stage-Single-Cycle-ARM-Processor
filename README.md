@@ -8,7 +8,7 @@ To run the project, open a Quartus project, ensure all SystemVerilog files are i
 To test custom programs, write ARM assembly code, convert it to machine code, save it as a .dat file, update imem.sv accordingly, and re-run simulation.
 
 The current assembly program used in the testbech (memfile.dat) executes the following instructions:
-
+```asm
 MAIN    SUB R0, R15, R15
         ADD R1, R0, #255
         ADD R2, R1, R1
