@@ -2,7 +2,7 @@ This project implements a simplified ARM single-cycle processor in SystemVerilog
 The processor supports the following instructions: ADD, SUB, AND, ORR, EOR, LDR, STR, BEQ, BGT, BLT, and B. All instruction execution, including fetch, decode, execute, memory access, and write-back, occurs within a single clock cycle.
 
 The system consists of a top-level module (top.sv), a controller (controller.sv), datapath components (including the register file, ALU, adder, sign extender, multiplexers, data memory), instruction memory (imem.sv), and a testbench for simulation. 
-The instruction memory loads machine code from a .dat file (e.g., mem.dat or memfile.dat). The controller decodes instructions and generates the necessary control signals for ALU operations, memory access, register writes, and branching. A condition checker evaluates the NZCV flags to determine whether conditional branches update the program counter.
+The instruction memory loads machine code from a .dat file. The controller decodes instructions and generates the necessary control signals for ALU operations, memory access, register writes, and branching. A condition checker evaluates the NZCV flags to determine whether conditional branches update the program counter.
 
 To run the project, open a Quartus project, ensure all SystemVerilog files are included, compile the design, and run simulation using ModelSim. A successful run will print “Simulation succeeded.” 
 To test custom programs, write ARM assembly code, convert it to machine code, save it as a .dat file, update imem.sv accordingly, and re-run simulation.
