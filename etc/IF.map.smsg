@@ -1,0 +1,1 @@
+Warning (10268): Verilog HDL information at Condition_Code_Register.sv(7): always construct contains both blocking and non-blocking assignments File: C:/Users/rwbrockhoff/Downloads/443/Final/ARM_Single_Cycle-1_restored/Condition_Code_Register.sv Line: 7

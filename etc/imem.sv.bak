@@ -1,0 +1,13 @@
+module imem(input [31:0] A, output [31:0] Instr);
+
+logic [31:0] RAMMem [0:63];
+
+assign Instr=RAMMem[A[31:2]];
+
+initial begin 
+
+      $readmemh("mem.dat",RAMMem);
+
+	end 
+
+endmodule 

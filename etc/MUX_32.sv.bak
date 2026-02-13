@@ -1,0 +1,9 @@
+module Mux_32(
+	input logic select,
+	input logic [3:0] zero, one,
+	output logic [3:0] output
+);
+
+	assign output = select ? one : zero;
+
+endmodule

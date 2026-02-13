@@ -1,0 +1,16 @@
+module top(input clk, reset, output MemWrite, 
+           output [31:0] WriteData, ReadData, ALUResult);
+
+//logic [3:0] flags, ALUControl;
+logic [11:0] ToController;
+logic [1:0] ImmSrc, RegSrc;
+logic PCSrc, MemtoReg, ALUSrc, RegWrite;
+logic [3:0] ALUControl, flags;
+
+
+
+// instantiate your modules here 
+
+
+			  
+endmodule 

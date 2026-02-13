@@ -1,0 +1,14 @@
+module Condition_Code_Register(
+	input clk, reset,
+	input logic [3:0] next_flags
+	output logic [3:0] ALUFlags
+);
+
+	always_ff @ (posedge clk or posedge reset) begin
+		if(reset)
+			ALUFlags = 4'b0000;
+		else
+			ALUFlags <= next_flags;
+	end
+	
+endmodule

@@ -1,0 +1,246 @@
+# Reading pref.tcl
+# do IF_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying C:/intelFPGA/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -sv -work work +incdir+C:/Users/rwbrockhoff/Downloads/443/Final/ARM_Single_Cycle-1_restored {C:/Users/rwbrockhoff/Downloads/443/Final/ARM_Single_Cycle-1_restored/top.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 11:05:04 on Dec 19,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/rwbrockhoff/Downloads/443/Final/ARM_Single_Cycle-1_restored" C:/Users/rwbrockhoff/Downloads/443/Final/ARM_Single_Cycle-1_restored/top.sv 
+# -- Compiling module top
+# 
+# Top level modules:
+# 	top
+# End time: 11:05:04 on Dec 19,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/rwbrockhoff/Downloads/443/Final/ARM_Single_Cycle-1_restored {C:/Users/rwbrockhoff/Downloads/443/Final/ARM_Single_Cycle-1_restored/SignExtend.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 11:05:04 on Dec 19,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/rwbrockhoff/Downloads/443/Final/ARM_Single_Cycle-1_restored" C:/Users/rwbrockhoff/Downloads/443/Final/ARM_Single_Cycle-1_restored/SignExtend.sv 
+# -- Compiling module SignExtend
+# 
+# Top level modules:
+# 	SignExtend
+# End time: 11:05:04 on Dec 19,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/rwbrockhoff/Downloads/443/Final/ARM_Single_Cycle-1_restored {C:/Users/rwbrockhoff/Downloads/443/Final/ARM_Single_Cycle-1_restored/RegFile.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 11:05:04 on Dec 19,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/rwbrockhoff/Downloads/443/Final/ARM_Single_Cycle-1_restored" C:/Users/rwbrockhoff/Downloads/443/Final/ARM_Single_Cycle-1_restored/RegFile.sv 
+# -- Compiling module RegFile
+# 
+# Top level modules:
+# 	RegFile
+# End time: 11:05:05 on Dec 19,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/rwbrockhoff/Downloads/443/Final/ARM_Single_Cycle-1_restored {C:/Users/rwbrockhoff/Downloads/443/Final/ARM_Single_Cycle-1_restored/Program_Counter.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 11:05:05 on Dec 19,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/rwbrockhoff/Downloads/443/Final/ARM_Single_Cycle-1_restored" C:/Users/rwbrockhoff/Downloads/443/Final/ARM_Single_Cycle-1_restored/Program_Counter.sv 
+# -- Compiling module Program_Counter
+# 
+# Top level modules:
+# 	Program_Counter
+# End time: 11:05:05 on Dec 19,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/rwbrockhoff/Downloads/443/Final/ARM_Single_Cycle-1_restored {C:/Users/rwbrockhoff/Downloads/443/Final/ARM_Single_Cycle-1_restored/MUX_4.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 11:05:05 on Dec 19,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/rwbrockhoff/Downloads/443/Final/ARM_Single_Cycle-1_restored" C:/Users/rwbrockhoff/Downloads/443/Final/ARM_Single_Cycle-1_restored/MUX_4.sv 
+# -- Compiling module MUX_4
+# 
+# Top level modules:
+# 	MUX_4
+# End time: 11:05:05 on Dec 19,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/rwbrockhoff/Downloads/443/Final/ARM_Single_Cycle-1_restored {C:/Users/rwbrockhoff/Downloads/443/Final/ARM_Single_Cycle-1_restored/MUX_32.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 11:05:06 on Dec 19,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/rwbrockhoff/Downloads/443/Final/ARM_Single_Cycle-1_restored" C:/Users/rwbrockhoff/Downloads/443/Final/ARM_Single_Cycle-1_restored/MUX_32.sv 
+# -- Compiling module MUX_32
+# 
+# Top level modules:
+# 	MUX_32
+# End time: 11:05:06 on Dec 19,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/rwbrockhoff/Downloads/443/Final/ARM_Single_Cycle-1_restored {C:/Users/rwbrockhoff/Downloads/443/Final/ARM_Single_Cycle-1_restored/Instruction_Decode.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 11:05:06 on Dec 19,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/rwbrockhoff/Downloads/443/Final/ARM_Single_Cycle-1_restored" C:/Users/rwbrockhoff/Downloads/443/Final/ARM_Single_Cycle-1_restored/Instruction_Decode.sv 
+# -- Compiling module Instruction_Decode
+# 
+# Top level modules:
+# 	Instruction_Decode
+# End time: 11:05:06 on Dec 19,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/rwbrockhoff/Downloads/443/Final/ARM_Single_Cycle-1_restored {C:/Users/rwbrockhoff/Downloads/443/Final/ARM_Single_Cycle-1_restored/datapath.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 11:05:06 on Dec 19,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/rwbrockhoff/Downloads/443/Final/ARM_Single_Cycle-1_restored" C:/Users/rwbrockhoff/Downloads/443/Final/ARM_Single_Cycle-1_restored/datapath.sv 
+# -- Compiling module datapath
+# 
+# Top level modules:
+# 	datapath
+# End time: 11:05:06 on Dec 19,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/rwbrockhoff/Downloads/443/Final/ARM_Single_Cycle-1_restored {C:/Users/rwbrockhoff/Downloads/443/Final/ARM_Single_Cycle-1_restored/DataMemory.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 11:05:07 on Dec 19,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/rwbrockhoff/Downloads/443/Final/ARM_Single_Cycle-1_restored" C:/Users/rwbrockhoff/Downloads/443/Final/ARM_Single_Cycle-1_restored/DataMemory.sv 
+# -- Compiling module DataMemory
+# 
+# Top level modules:
+# 	DataMemory
+# End time: 11:05:07 on Dec 19,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/rwbrockhoff/Downloads/443/Final/ARM_Single_Cycle-1_restored {C:/Users/rwbrockhoff/Downloads/443/Final/ARM_Single_Cycle-1_restored/Controller.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 11:05:07 on Dec 19,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/rwbrockhoff/Downloads/443/Final/ARM_Single_Cycle-1_restored" C:/Users/rwbrockhoff/Downloads/443/Final/ARM_Single_Cycle-1_restored/Controller.sv 
+# -- Compiling module Controller
+# 
+# Top level modules:
+# 	Controller
+# End time: 11:05:07 on Dec 19,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/rwbrockhoff/Downloads/443/Final/ARM_Single_Cycle-1_restored {C:/Users/rwbrockhoff/Downloads/443/Final/ARM_Single_Cycle-1_restored/Condition_Code_Register.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 11:05:07 on Dec 19,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/rwbrockhoff/Downloads/443/Final/ARM_Single_Cycle-1_restored" C:/Users/rwbrockhoff/Downloads/443/Final/ARM_Single_Cycle-1_restored/Condition_Code_Register.sv 
+# -- Compiling module Condition_Code_Register
+# 
+# Top level modules:
+# 	Condition_Code_Register
+# End time: 11:05:08 on Dec 19,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/rwbrockhoff/Downloads/443/Final/ARM_Single_Cycle-1_restored {C:/Users/rwbrockhoff/Downloads/443/Final/ARM_Single_Cycle-1_restored/code_checker.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 11:05:08 on Dec 19,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/rwbrockhoff/Downloads/443/Final/ARM_Single_Cycle-1_restored" C:/Users/rwbrockhoff/Downloads/443/Final/ARM_Single_Cycle-1_restored/code_checker.sv 
+# -- Compiling module code_checker
+# 
+# Top level modules:
+# 	code_checker
+# End time: 11:05:08 on Dec 19,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/rwbrockhoff/Downloads/443/Final/ARM_Single_Cycle-1_restored {C:/Users/rwbrockhoff/Downloads/443/Final/ARM_Single_Cycle-1_restored/ALU.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 11:05:08 on Dec 19,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/rwbrockhoff/Downloads/443/Final/ARM_Single_Cycle-1_restored" C:/Users/rwbrockhoff/Downloads/443/Final/ARM_Single_Cycle-1_restored/ALU.sv 
+# -- Compiling module ALU
+# 
+# Top level modules:
+# 	ALU
+# End time: 11:05:08 on Dec 19,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/rwbrockhoff/Downloads/443/Final/ARM_Single_Cycle-1_restored {C:/Users/rwbrockhoff/Downloads/443/Final/ARM_Single_Cycle-1_restored/Adder.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 11:05:09 on Dec 19,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/rwbrockhoff/Downloads/443/Final/ARM_Single_Cycle-1_restored" C:/Users/rwbrockhoff/Downloads/443/Final/ARM_Single_Cycle-1_restored/Adder.sv 
+# -- Compiling module Adder
+# 
+# Top level modules:
+# 	Adder
+# End time: 11:05:09 on Dec 19,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/rwbrockhoff/Downloads/443/Final/ARM_Single_Cycle-1_restored {C:/Users/rwbrockhoff/Downloads/443/Final/ARM_Single_Cycle-1_restored/Instruction_Fetch.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 11:05:09 on Dec 19,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/rwbrockhoff/Downloads/443/Final/ARM_Single_Cycle-1_restored" C:/Users/rwbrockhoff/Downloads/443/Final/ARM_Single_Cycle-1_restored/Instruction_Fetch.sv 
+# -- Compiling module Instruction_Fetch
+# 
+# Top level modules:
+# 	Instruction_Fetch
+# End time: 11:05:09 on Dec 19,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/rwbrockhoff/Downloads/443/Final/ARM_Single_Cycle-1_restored {C:/Users/rwbrockhoff/Downloads/443/Final/ARM_Single_Cycle-1_restored/imem.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 11:05:10 on Dec 19,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/rwbrockhoff/Downloads/443/Final/ARM_Single_Cycle-1_restored" C:/Users/rwbrockhoff/Downloads/443/Final/ARM_Single_Cycle-1_restored/imem.sv 
+# -- Compiling module imem
+# 
+# Top level modules:
+# 	imem
+# End time: 11:05:10 on Dec 19,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -sv -work work +incdir+C:/Users/rwbrockhoff/Downloads/443/Final/ARM_Single_Cycle-1_restored {C:/Users/rwbrockhoff/Downloads/443/Final/ARM_Single_Cycle-1_restored/testbench.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 11:05:10 on Dec 19,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/rwbrockhoff/Downloads/443/Final/ARM_Single_Cycle-1_restored" C:/Users/rwbrockhoff/Downloads/443/Final/ARM_Single_Cycle-1_restored/testbench.sv 
+# -- Compiling module testbench
+# 
+# Top level modules:
+# 	testbench
+# End time: 11:05:10 on Dec 19,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc"  testbench
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=""+acc"" testbench 
+# Start time: 11:05:11 on Dec 19,2025
+# Loading sv_std.std
+# Loading work.testbench
+# Loading work.top
+# Loading work.datapath
+# Loading work.Instruction_Fetch
+# Loading work.Program_Counter
+# Loading work.Adder
+# Loading work.MUX_32
+# Loading work.imem
+# Loading work.Instruction_Decode
+# Loading work.MUX_4
+# Loading work.SignExtend
+# Loading work.RegFile
+# Loading work.ALU
+# Loading work.Condition_Code_Register
+# Loading work.DataMemory
+# Loading work.Controller
+# Loading work.code_checker
+# 
+# add wave *
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: rwbrockhoff  Hostname: LOANER-BY4F1B3  ProcessID: 21384
+#           Attempting to use alternate WLF file "./wlft9hiid6".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlft9hiid6
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# Simulation succeeded
+# ** Note: $stop    : C:/Users/rwbrockhoff/Downloads/443/Final/ARM_Single_Cycle-1_restored/testbench.sv(31)
+#    Time: 68 ps  Iteration: 0  Instance: /testbench
+# Break in Module testbench at C:/Users/rwbrockhoff/Downloads/443/Final/ARM_Single_Cycle-1_restored/testbench.sv line 31
+add wave -position insertpoint  \
+sim:/testbench/uut/dp/IF/PC
+restart -force
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+run 
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Simulation succeeded
+# ** Note: $stop    : C:/Users/rwbrockhoff/Downloads/443/Final/ARM_Single_Cycle-1_restored/testbench.sv(31)
+#    Time: 68 ps  Iteration: 0  Instance: /testbench
+# Break in Module testbench at C:/Users/rwbrockhoff/Downloads/443/Final/ARM_Single_Cycle-1_restored/testbench.sv line 31
+add wave -position insertpoint  \
+sim:/testbench/uut/dp/ID/Inst
+restart -force
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Simulation succeeded
+# ** Note: $stop    : C:/Users/rwbrockhoff/Downloads/443/Final/ARM_Single_Cycle-1_restored/testbench.sv(31)
+#    Time: 68 ps  Iteration: 0  Instance: /testbench
+# Break in Module testbench at C:/Users/rwbrockhoff/Downloads/443/Final/ARM_Single_Cycle-1_restored/testbench.sv line 31
+# End time: 11:13:28 on Dec 19,2025, Elapsed time: 0:08:17
+# Errors: 0, Warnings: 0

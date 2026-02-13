@@ -1,0 +1,77 @@
+module ALU(
+	input logic [3:0] ALUControl,
+	input logic [31:0] SrcA, SrcB,
+	output logic [3:0] ALUFlags,
+	output logic [31:0] ALUResult
+);
+
+	parameter AND = 4'b0000;
+	parameter OR  = 4'b0001;
+	parameter XOR = 4'b0010;
+	parameter ADD = 4'b0011;
+	parameter LSL = 4'b0100;
+	parameter LSR = 4'b0101;
+	parameter ASR = 4'b0110;
+	parameter SUB = 4'b1011;
+	
+	logic [32:0] temp;
+	logic N, Z, C, V;
+	
+	always_comb begin
+		temp = 33'd0;
+		case(ALUControl)
+			AND: ALUResult = SrcA & SrcB;
+			OR:  ALUResult = SrcA | SrcB;
+			XOR: ALUResult = SrcA ^ SrcB;
+			ADD: begin
+				temp = {1'b0, SrcA} + {1'b0, SrcB}; 
+				ALUResult = temp[31:0];
+			end
+			LSL: ALUResult = SrcA << SrcB;
+			LSR: ALUResult = SrcA >> SrcB;
+			ASR: ALUResult = $signed(SrcA) >>> SrcB;
+			SUB: begin
+				temp = {1'b0, SrcA} + {1'b0, ~SrcB} + 1; 
+				ALUResult = temp[31:0];
+			end
+			default: ALUResult = 32'h00000000;
+		endcase
+	end
+
+	always_comb begin
+		
+		N = ALUResult[31]; 
+		Z = (ALUResult == 32'h00000000);
+		C = 1'b0;
+		V = 1'b0;
+		
+		case(ALUControl)
+			AND, OR, XOR, LSL, LSR, ASR: begin
+				N = ALUResult[31]; 
+				Z = (ALUResult == 32'h00000000); 
+				C = 1'b0;
+				V = 1'b0;
+			end
+			ADD: begin
+				N = ALUResult[31]; 
+				Z = (ALUResult == 32'h00000000);
+				C = temp[32];
+				V = (~(SrcA[31] ^ SrcB[31])) & (SrcA[31] ^ ALUResult[31]);
+			end
+			SUB: begin
+				N = ALUResult[31]; 
+				Z = (ALUResult == 32'h00000000);
+				C = temp[32];
+				V = (SrcA[31] ^ SrcB[31]) & (SrcA[31] ^ ALUResult[31]);
+			end
+			default: begin	
+				N = ALUResult[31]; 
+				Z = (ALUResult == 32'h00000000);
+				C = 1'b0;
+				V = 1'b0;
+			end
+		endcase
+	end
+
+	assign ALUFlags = {N, Z, C, V};
+	endmodule

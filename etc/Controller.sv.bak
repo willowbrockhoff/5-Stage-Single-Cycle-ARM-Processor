@@ -1,0 +1,110 @@
+// controller.sv
+module Controller (
+    input  logic        clk,
+    input  logic        reset,
+    input  logic [31:0] Instr,
+    input  logic [3:0]  ALUFlags,    // {N,Z,C,V} from Condition_Code_Register
+
+    output logic        RegWrite,
+    output logic        MemWrite,
+    output logic        ALUSrc,
+    output logic        MemtoReg,
+    output logic [1:0]  RegSrc,
+    output logic [1:0]  ImmSrc,
+    output logic [3:0]  ALUControl,
+    output logic        PCSrc
+);
+
+    // Decode fields
+    logic [3:0] cond;
+    logic [1:0] op;
+    logic       funct_imm;
+    logic [3:0] funct;
+
+    assign cond      = Instr[31:28];
+    assign op        = Instr[27:26];
+    assign funct_imm = Instr[25];
+    assign funct     = Instr[24:21];
+
+    // ALU flags
+    wire N, Z, C, V;
+    assign {N, Z, C, V} = ALUFlags;
+
+    // Condition satisfied?
+    logic cond_satisfied;
+
+    code_checker cc (
+        .cond      (cond),
+        .Z         (Z),
+        .N         (N),
+        .C         (C),
+        .V         (V),
+        .satisfied (cond_satisfied)
+    );
+
+    // Main control
+    always_comb begin
+        // Safe defaults
+        RegWrite   = 1'b0;
+        MemWrite   = 1'b0;
+        ALUSrc     = 1'b0;
+        MemtoReg   = 1'b0;
+        RegSrc     = 2'b00;
+        ImmSrc     = 2'b00;
+        ALUControl = 4'b0011; // default ADD
+        PCSrc      = 1'b0;
+
+        unique case (op)
+            // 00: Data processing
+            2'b00: begin
+                RegWrite   = 1'b1;
+                MemWrite   = 1'b0;
+                MemtoReg   = 1'b0;        // write ALUResult to RF
+                ALUSrc     = funct_imm;   // 1 => immediate
+                RegSrc     = 2'b00;       // use Rt/Rn as usual
+                ImmSrc     = 2'b00;       // zero-extended 8-bit imm (example)
+                ALUControl = funct;       // directly use funct as ALU control
+                PCSrc      = 1'b0;        // no branch here
+            end
+
+            // 01: Load/Store
+            2'b01: begin
+                ALUSrc     = 1'b1;        // base + immediate offset
+                ImmSrc     = 2'b01;       // 12-bit immediate
+                RegSrc     = 2'b00;
+                ALUControl = 4'b0011;     // ADD for address calculation
+
+                if (Instr[20]) begin
+                    // LDR
+                    RegWrite = 1'b1;
+                    MemWrite = 1'b0;
+                    MemtoReg = 1'b1;      // write data memory to RF
+                end else begin
+                    // STR
+                    RegWrite = 1'b0;
+                    MemWrite = 1'b1;
+                    MemtoReg = 1'b0;
+                end
+
+                PCSrc = 1'b0;
+            end
+
+            // 10: Branch
+            2'b10: begin
+                RegWrite   = 1'b0;
+                MemWrite   = 1'b0;
+                MemtoReg   = 1'b0;
+                ALUSrc     = 1'b1;        // if the ALU is used for PC+offset
+                RegSrc     = 2'b00;
+                ImmSrc     = 2'b10;       // branch immediate (already shifted)
+                ALUControl = 4'b0011;     // ADD: PC + offset
+                PCSrc      = cond_satisfied;
+            end
+
+            default: begin
+                // keep defaults (NOP)
+            end
+        endcase
+    end
+
+endmodule

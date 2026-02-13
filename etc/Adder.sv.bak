@@ -1,0 +1,6 @@
+module Adder(input [31:0] input, 
+				output [31:0] output);
+	
+	assign output = input + 32'd4; 
+	
+endmodule
